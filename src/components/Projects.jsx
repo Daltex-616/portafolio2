@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "API fastapi",
-    description: "Backend para un proyecto realizado en python",
+    description: ":O",
     image: img3,
     tags: ["Python", "FastApi", "MongoDB"],
     githubLink: "https://github.com/Daltex-616/ecoalert_fastapi",
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "E-Commerce De servicios",
-    description: "A full-featured online store built with React and Node.js",
+    description: ":3",
     image: "https://img.freepik.com/vector-gratis/estilo-roto-pronto-viene-plantilla-promocional-publicaciones-redes-sociales_1017-55783.jpg?semt=ais_hybrid",
     tags: ["React", "Node.js", "MongoDB"],
     githubLink: "https://github.com",
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     title: "Faculty Managment",
-    description: "A collaborative project management tool with real-time updates",
+    description: ":D",
     image: "https://img.freepik.com/vector-gratis/estilo-roto-pronto-viene-plantilla-promocional-publicaciones-redes-sociales_1017-55783.jpg?semt=ais_hybrid",
     tags: ["React", "Electron", "SQL"],
     githubLink: "https://github.com",
