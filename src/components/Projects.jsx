@@ -3,6 +3,8 @@ import { ExternalLink, Github } from 'lucide-react';
 import img1 from "../assets/project_1.png"
 import img2 from "../assets/project_2.png"
 import img3 from "../assets/project_3.png"
+import img4 from "../assets/project_7.png"
+import img5 from "../assets/project_8.png"
 
 const projects = [
   {
@@ -31,27 +33,27 @@ const projects = [
   },
   {
     title: "E-Commerce De servicios",
-    description: ":3",
-    image: "https://img.freepik.com/vector-gratis/estilo-roto-pronto-viene-plantilla-promocional-publicaciones-redes-sociales_1017-55783.jpg?semt=ais_hybrid",
+    description: "E-Comerce de servicios sobre juegos",
+    image: img5,
     tags: ["React", "Node.js", "MongoDB"],
-    githubLink: "https://github.com",
-    liveLink: "https://example.com"
+    githubLink: "https://github.com/Daltex-616/ledbolt",
+    liveLink: "https://ledbolt.netlify.app/"
   },
   {
     title: "Faculty Managment",
-    description: ":O",
+    description: "A",
     image: "https://img.freepik.com/vector-gratis/estilo-roto-pronto-viene-plantilla-promocional-publicaciones-redes-sociales_1017-55783.jpg?semt=ais_hybrid",
     tags: ["React", "Electron", "SQL"],
     githubLink: "https://github.com",
     liveLink: "https://example.com"
   },
   {
-    title: "NotiGamer",
-    description: "xD",
-    image: "https://img.freepik.com/vector-gratis/estilo-roto-pronto-viene-plantilla-promocional-publicaciones-redes-sociales_1017-55783.jpg?semt=ais_hybrid",
+    title: "luxuri",
+    description: "Transportitas",
+    image: img4,
     tags: ["React", "Tailwind", "Node.Js"],
     githubLink: "https://github.com",
-    liveLink: "https://example.com"
+    liveLink: "https://luxurixusus.netlify.app/"
   }
 ];
 
