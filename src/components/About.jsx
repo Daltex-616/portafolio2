@@ -175,7 +175,7 @@ export default function About() {
           <FeatureCard
             icon={<Palette className="w-6 h-6" />}
             title="UI/UX Design"
-            description="Diseño de interfaces intuitivas centradas en el usuario. Prototipado con Figma y Adobe XD."
+            description="Diseño de interfaces intuitivas centradas en el usuario."
           />
         </div>
 
