@@ -133,10 +133,10 @@ export default function About() {
 
   const designSkills = [
     { name: "UI/UX Design", percentage: 85, color: "bg-purple-500" },
-    { name: "Figma", percentage: 80, color: "bg-purple-400" },
-    { name: "Adobe XD", percentage: 70, color: "bg-pink-500" },
+    { name: "Camvas", percentage: 80, color: "bg-purple-400" },
+    { name: "DaVinci Resolve", percentage: 70, color: "bg-pink-500" },
     { name: "Responsive Design", percentage: 90, color: "bg-indigo-500" },
-    { name: "Prototyping", percentage: 75, color: "bg-purple-600" },
+    { name: "Upscayl", percentage: 75, color: "bg-purple-600" },
   ];
 
   return (
