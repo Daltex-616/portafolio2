@@ -9,12 +9,13 @@ import img5 from "../assets/project_8.png";
 
 const projects = [
   {
-    title: "Unidep",
-    description: "Aplicación que muestra deportes universitarios con geolocalización en tiempo real.",
-    image: img1,
-    tags: ["React", "Material UI", "Redux"],
-    githubLink: "https://github.com/Daltex-616/UniDep-Pilar-Tecno",
-    liveLink: "https://unidep.onrender.com/"
+    title: "Luxuri",
+    description: "Plataforma de transporte ejecutivo con reservas en tiempo real.",
+    image: img4,
+    tags: ["React", "Tailwind CSS", "Node.js"],
+    githubLink: "https://github.com/Daltex-616/luxury",
+    liveLink: "https://luxurytransfer.com.ar/"
+    
   },
   {
     title: "DigiQuizt",
@@ -49,12 +50,12 @@ const projects = [
     liveLink: "https://example.com"
   },
   {
-    title: "Luxuri",
-    description: "Plataforma de transporte ejecutivo con reservas en tiempo real.",
-    image: img4,
-    tags: ["React", "Tailwind CSS", "Node.js"],
-    githubLink: "https://github.com",
-    liveLink: "https://luxurixusus.netlify.app/"
+    title: "Unidep",
+    description: "Aplicación que muestra deportes universitarios con geolocalización en tiempo real.",
+    image: img1,
+    tags: ["React", "Material UI", "Redux"],
+    githubLink: "https://github.com/Daltex-616/UniDep-Pilar-Tecno",
+    liveLink: "https://unidep.onrender.com/"
   }
 ];
 
