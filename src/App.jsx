@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <Hero/>
-    <About/>
     <Projects/>
+    <About/>
     <Contact/>
     <Footer/>
     </>
