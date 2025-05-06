@@ -24,13 +24,13 @@ function ContactInfo({ icon, title, detail }) {
 export default function Contact() {
   const form = useRef(null);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",  // ¡Cambiado para coincidir con EmailJS!
+    user_email: "",  // ¡Cambiado para coincidir con EmailJS!
     message: "",
   });
   const [formErrors, setFormErrors] = useState({
-    name: false,
-    email: false,
+    user_name: false,
+    user_email: false,
     message: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,18 +43,18 @@ export default function Contact() {
   const validateForm = () => {
     let isValid = true;
     const newErrors = {
-      name: false,
-      email: false,
+      user_name: false,
+      user_email: false,
       message: false,
     };
 
-    if (!formData.name.trim()) {
-      newErrors.name = true;
+    if (!formData.user_name.trim()) {
+      newErrors.user_name = true;
       isValid = false;
     }
 
-    if (!formData.email.trim() || !/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = true;
+    if (!formData.user_email.trim() || !/^\S+@\S+\.\S+$/.test(formData.user_email)) {
+      newErrors.user_email = true;
       isValid = false;
     }
 
@@ -88,34 +88,33 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          form.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
-        .then(
-          () => {
-            setIsSubmitting(false);
-            setAlert({
-              show: true,
-              message: "¡Mensaje enviado con éxito! Me pondré en contacto pronto.",
-              type: "success",
-            });
-            setFormData({ name: "", email: "", message: "" });
-          },
-          () => {
-            setIsSubmitting(false);
-            setAlert({
-              show: true,
-              message: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
-              type: "error",
-            });
-          }
-        );
-    }
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          setAlert({
+            show: true,
+            message: "¡Mensaje enviado con éxito! Me pondré en contacto pronto.",
+            type: "success",
+          });
+          setFormData({ user_name: "", user_email: "", message: "" });
+        },
+        (error) => {
+          setIsSubmitting(false);
+          setAlert({
+            show: true,
+            message: "Error al enviar el mensaje. Por favor, intenta de nuevo.",
+            type: "error",
+          });
+          console.error("EmailJS error:", error);
+        }
+      );
   };
 
   const closeAlert = () => {
@@ -206,22 +205,22 @@ export default function Contact() {
           >
             <motion.div variants={itemVariants}>
               <label
-                htmlFor="name"
+                htmlFor="user_name"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Nombre / Empresa
               </label>
               <input
                 type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+                id="user_name"
+                name="user_name"
+                value={formData.user_name}
                 onChange={handleChange}
                 className={`mt-1 block w-full px-4 py-3 rounded-lg border ${
-                  formErrors.name ? "border-red-500" : "border-gray-300"
+                  formErrors.user_name ? "border-red-500" : "border-gray-300"
                 } focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200`}
               />
-              {formErrors.name && (
+              {formErrors.user_name && (
                 <p className="mt-1 text-sm text-red-500">
                   Este campo es obligatorio.
                 </p>
@@ -230,22 +229,22 @@ export default function Contact() {
 
             <motion.div variants={itemVariants}>
               <label
-                htmlFor="email"
+                htmlFor="user_email"
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Email
               </label>
               <input
                 type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                id="user_email"
+                name="user_email"
+                value={formData.user_email}
                 onChange={handleChange}
                 className={`mt-1 block w-full px-4 py-3 rounded-lg border ${
-                  formErrors.email ? "border-red-500" : "border-gray-300"
+                  formErrors.user_email ? "border-red-500" : "border-gray-300"
                 } focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200`}
               />
-              {formErrors.email && (
+              {formErrors.user_email && (
                 <p className="mt-1 text-sm text-red-500">
                   Por favor, ingresa un email válido.
                 </p>
